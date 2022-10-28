@@ -1,2 +1,2 @@
 # SQL_Projects
-List of SQL Projects
+Assorted SQL Projects
