@@ -1,4 +1,4 @@
-/*YOUTUBE CLONE DATABASE CREATION AND DATA INSERTION*/
+/*YOUTUBE CLONE DATABASE CREATION*/
 
 CREATE DATABASE YT_clone;
 
@@ -15,6 +15,8 @@ CREATE TABLE Videos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     video_url VARCHAR(355) NOT NULL,
     user_id INT NOT NULL,
+    title VARCHAR(244) NOT NULL,
+    views, INT NOT NULL,
     created_date TIMESTAMP DEFAULT NOW (),
     FOREIGN KEY (user_id)
         REFERENCES users (id)
@@ -25,6 +27,7 @@ CREATE TABLE Videos (
 CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     comment_text VARCHAR(1000) NOT NULL,
+    likes INT NOT NULL,
     created_at TIMESTAMP DEFAULT NOW (),
     FOREIGN KEY (user_id)
         REFERENCES users (id),
@@ -44,10 +47,10 @@ CREATE TABLE likes (
 );
 ------------------------------------------------------------------------------------------------------
 
-/*Follows*/
-CREATE TABLE follows (
-    follower_id INT NOT NULL,
-    followee_id INT NOT NULL,
+/*Subscribers*/
+CREATE Subscribers follows (
+    subscriber_id INT NOT NULL,
+    subbed_id INT NOT NULL,
     created_at TIMESTAMP DEFAULT NOW (),
     FOREIGN KEY (follower_id)
         REFERENCES users (id),
