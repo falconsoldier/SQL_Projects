@@ -4,8 +4,8 @@ Assorted SQL Projects
 
 Courses I have learned from:
 
-freecodecamp.com
+*freecodecamp.com
 
-datacamp.com
+*datacamp.com
 
-hackerrank.com
+*hackerrank.com
